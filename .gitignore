@@ -1,0 +1,20 @@
+# Python / Flask 환경 및 가상환경
+*.pyc
+__pycache__/
+venv/
+venvs/
+.venv/
+env/
+
+# 개발용 SQLite 데이터베이스 (보안 및 데이터 유실 방지)
+*.db
+*.sqlite3
+
+# 환경 변수 및 설정 파일
+.env
+.flaskenv
+
+# IDE / 에디터 설정 파일
+.vscode/
+.idea/
+.DS_Store
