@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <h1>{{ question.subject }}</h1>
 
 <div>
@@ -7,13 +8,13 @@
 <h5>{{ question.answer_set|length }}개의 답변이 있습니다.</h5>
 <div>
     <ul>
-    {% for answer in question.anser_set %}
-        <li>{{ answer.contebt }}</li>
+    {% for answer in question.answer_set %}
+        <li>{{ answer.content }}</li>
     {% endfor %}
     </ul>
-    
+
 </div>
 <form action="{{ url_for('answer.create', question_id=question.id) }}" method="post">
     <textarea name="content" id="content" rows="15"></textarea>
-    <input tupe="submit" value="답변등록">
+    <input type="submit" value="답변등록">
 </form>
