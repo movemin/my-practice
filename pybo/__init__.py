@@ -7,6 +7,8 @@ import config
 db = SQLAlchemy()
 migrate = Migrate()
 
+# 순환참조
+# 애플리케이션 팩토리
 def create_app():
     app = Flask(__name__)
     app.config.from_object(config)
